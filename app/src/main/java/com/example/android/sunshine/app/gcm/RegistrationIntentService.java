@@ -22,6 +22,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.android.sunshine.app.BuildConfig;
 import com.example.android.sunshine.app.MainActivity;
 import com.example.android.sunshine.app.R;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
@@ -48,7 +49,7 @@ public class RegistrationIntentService extends IntentService {
                 InstanceID instanceID = InstanceID.getInstance(this);
 
                 // TODO: gcm_default sender ID comes from the API console
-                String senderId = getString(R.string.gcm_defaultSenderId);
+                String senderId = BuildConfig.GCM_SENDER_ID;
                 if ( senderId.length() != 0 ) {
                     String token = instanceID.getToken(senderId,
                             GoogleCloudMessaging.INSTANCE_ID_SCOPE, null);

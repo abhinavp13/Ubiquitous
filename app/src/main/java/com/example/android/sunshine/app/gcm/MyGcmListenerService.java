@@ -27,6 +27,7 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.example.android.sunshine.app.BuildConfig;
 import com.example.android.sunshine.app.MainActivity;
 import com.example.android.sunshine.app.R;
 import com.google.android.gms.gcm.GcmListenerService;
@@ -56,7 +57,7 @@ public class MyGcmListenerService extends GcmListenerService {
         // Time to unparcel the bundle!
         if (!data.isEmpty()) {
             // TODO: gcm_default sender ID comes from the API console
-            String senderId = getString(R.string.gcm_defaultSenderId);
+            String senderId = BuildConfig.GCM_SENDER_ID;
             if (senderId.length() == 0) {
                 Toast.makeText(this, "SenderID string needs to be set", Toast.LENGTH_LONG).show();
             }
