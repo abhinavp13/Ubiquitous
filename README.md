@@ -1,6 +1,6 @@
 Android Nanodegree Ubiquitous App
 =================================
-Android wear sunshine app, is an interesting weather displaying interface for wearable android devices.
+Android wear sunshine app, is an interesting weather displaying interface for wearable android devices. 
 
 Screenshots
 ===========
